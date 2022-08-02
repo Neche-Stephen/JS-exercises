@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+    <script>
+        
+        let jewelArray = [4,"ssss","ssas","sa","s"]
+        removeNumberOfJewel(jewelArray)
+
+        function removeNumberOfJewel(jewelArray){
+            jewelArray.shift()
+            minCost = jewelArray.map(checkJewelsMinCost)
+            document.write(minCost)
+        }
+        function checkJewelsMinCost(theJewels){ 
+            sCount = 0
+            otherCount = 0
+            for(let jewelry of theJewels){
+               if (jewelry == 's'){
+                sCount++
+               }
+               else{
+                otherCount++
+               }
+            }
+            if (sCount % 2 == 0){
+                sheWillPayForS = sCount/2
+            }
+            else if (sCount % 2 == 1 && sCount > 1){
+                sheWillPayForS = ((sCount - 1)/2) + 1
+            }
+            else{
+                sheWillPayForS = 1
+            }
+            sheWillPayTotal = sheWillPayForS + otherCount
+            return sheWillPayTotal
+            
+        }
+
+
+
+
+    </script>
+</body>
+</html>
