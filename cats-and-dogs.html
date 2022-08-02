@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        counted1 = [1,1,8]
+        counted2 = [1,1,4]
+        counted3 = [1,1,2]
+        personalCount = [3,4,4]
+        checkChef(counted1)
+        checkChef(counted2)
+        checkChef(counted3)
+        checkChef(personalCount)
+
+        function checkChef(counted){
+           catLeg = counted[0] * 4
+           dogLeg = counted[1] * 4
+           totalLegChefCounted = counted[2]
+           dogAndCatLegTotal = catLeg + dogLeg
+           if (totalLegChefCounted % 4 != 0){
+            document.write('no')
+            document.write("<br/>")
+           }
+           else if (totalLegChefCounted > dogAndCatLegTotal){
+            document.write("no")
+            document.write("<br/>")
+           }
+           else if(totalLegChefCounted < dogLeg ){
+            document.write("no")
+            document.write("<br/>")
+           }
+           else{
+            document.write("yes")
+            document.write("<br/>")
+           }
+        }
+    </script>
+</body>
+</html>
