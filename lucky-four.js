@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-
-        let arrayFour = [5,447474,228,6664,40,81]
+let arrayFour = [5,447474,228,6664,40,81]
         removeNumberOfIntegerAndCheckFour(arrayFour)
         
 
         function removeNumberOfIntegerAndCheckFour(arrayFour){
             arrayFour.shift()
             theNumberOfFours = arrayFour.map(checkFour)
-            document.write(theNumberOfFours)
+            console.log(theNumberOfFours)
         }
         function checkFour(Four){  
             Four = Four.toString()
@@ -29,8 +18,3 @@
             }
             return a
         }
-
-
-    </script>
-</body>
-</html>
