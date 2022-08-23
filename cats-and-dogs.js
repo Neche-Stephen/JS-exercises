@@ -1,11 +1,20 @@
-counted1 = [1,1,8]
-counted2 = [1,1,4]
-counted3 = [1,1,2]
-personalCount = [3,4,4]
-checkChef(counted1)
-checkChef(counted2)
-checkChef(counted3)
-checkChef(personalCount)
+
+const prompt = require('prompt-sync')();
+const T = prompt('Enter Number of Test cases \n');
+while(T > 1000 || T < 1){
+  const T = prompt('Enter a Number between 1 and 1000')
+}
+const C = prompt('Enter Number of Dogs \n');
+const D = prompt('Enter Number of Cats\n');
+const L = prompt('Enter Number of Legs Chef Counted \n');
+
+counted1 = [T,C,D,L]
+removeNumberOfIntegerAndCheckChef(counted1)
+
+function removeNumberOfIntegerAndCheckChef(array){
+   array.shift()
+   checkChef(array)
+}
 
 function checkChef(counted){
    catLeg = counted[0] * 4
